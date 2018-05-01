@@ -1,0 +1,75 @@
+# Copyright 2017 Christian Henning
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# This file can be used to costumize Brian preferences for this package only.
+# More information about preferences can be found here:
+# http://brian2.readthedocs.io/en/stable/advanced/preferences.html
+# Note, that weave only works in Python2.
+
+# Options are only uncommented, if they differ from the default value.
+
+[codegen]
+#loop_invariant_optimisations = True
+#string_expression_target = 'numpy'
+target = 'cython' # Do not use the weave code generation targets when running multiple simulations in parallel.
+
+[codegen.cpp]
+#compiler = ''
+#define_macros = []
+#extra_compile_args = None
+#extra_compile_args_gcc = ['-w', '-O3', '-ffast-math', '-fno-finite-math-only', '-march=native']
+#extra_compile_args_msvc = ['/Ox', '/w', '/arch:SSE2']
+#extra_link_args = []
+#headers = []
+#include_dirs = []
+#libraries = []
+#library_dirs = []
+#msvc_architecture = ''
+#msvc_vars_location = ''
+#runtime_library_dirs = []
+
+[codegen.generators]
+[codegen.generators.cpp]
+flush_denormals = True # NOTE, may not compile on all platforms
+#restrict_keyword = '__restrict'
+
+[codegen.runtime]
+[codegen.runtime.cython]
+#cache_dir = None
+#multiprocess_safe = True
+
+[codegen.numpy.runtime]
+#discard_units = False
+
+[core]
+#default_float_dtype = float64 # Only float64 currently supported.
+#default_integer_dtype = int32
+#outdated_dependency_error = True
+
+[core.network]
+#default_schedule = ['start', 'groups', 'thresholds', 'synapses', 'resets', 'end']
+
+[devices]
+[devices.cpp_standalone]
+#openmp_spatialneuron_strategy = None
+#openmp_threads = 0
+
+[logging]
+#console_log_level = 'INFO'
+#delete_log_on_exit = True
+#file_log = True
+#file_log_level = 'DIAGNOSTIC'
+#save_script = True
+#std_redirection = True
+#std_redirection_to_file = True
