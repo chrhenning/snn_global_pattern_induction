@@ -1,4 +1,4 @@
-# SNNStimulatedPatternDevelopment
+# Forcing a Glocal Pattern on the Activity of an SNN
 Framework to train and simulate a spiking neural network (SNN) using Brian2, that implements a learning rule that combines local learning rules with a global feedback mechanism to support strong, contrasty (activity) pattern formation. Such global, "unguided" pattern induction (e.g., through neuromodulatory signals) might lead to easily discriminable output activations even if the network is trained via local (biological-plausible) mechanisms.
 
 ## Installation
