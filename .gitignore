@@ -90,6 +90,3 @@ ENV/
 
 # ignore local log files
 logs
-
-# don't add datasets to the repo
-data/
